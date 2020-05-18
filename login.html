@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Natteravnen Bar</title>
+
+</head>
+<body>
+
+<header>
+   <div class="circle_container">
+	<div class="circle_main">
+		<div class="circle_text_container">
+			<div class = "circle_text">
+				Log in or create an account
+			</div>
+		</div>
+	</div>
+</div>	
+</header>
+   
+<main>
+    <form action="home.html">
+<div class="container">
+    
+    <input type="text" placeholder="E-mail:" name="uname" required>
+
+    <input type="password" placeholder="Password:" name="psw" required>
+        
+    <button class="log-in" type="submit">Login</button>
+    <br>
+    <label style= "color: #FDFDFE;">
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+   
+    <span style= "color: #FDFDFE;" class="psw">Forgot <a href="#">password?</a></span>
+    <hr>
+    <div class="Social">
+<button type="submit" class="google-btn"><img class="google-icon" src=img/google_icon.png>
+<i class="fa fa-google" aria-hidden="true"></i> Login with Google
+</button>
+<button type="submit" class="facebook-btn"><img class="fb-icon" src=img/fb_icon.png>
+<i class="fa fa-facebook" aria-hidden="true"></i> Login with Facebook
+</button>
+</div>
+    </form>
+</main>
+
+<footer>
+   <p>or</p>
+   <div class="create-box">
+   <a href="createaccount.html"><button class="create" type="submit">Create an account</button></a>
+    </div>
+</footer>
+
+</body>
+</html>    

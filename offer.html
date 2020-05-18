@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/offer.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Natteravnen Bar</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    
+    <script> 
+    $(document).ready(function(){
+    $(".accordion-title").click(function(e){
+        var accordionitem = $(this).attr("data-tab");
+        $("#"+accordionitem).slideToggle().parent().siblings().find(".accordion-content").slideUp();
+
+        $(this).toggleClass("active-title");
+        $("#"+accordionitem).parent().siblings().find(".accordion-title").removeClass("active-title");
+
+        $("i.fa-chevron-down",this).toggleClass("chevron-top");
+        $("#"+accordionitem).parent().siblings().find(".accordion-title i.fa-chevron-down").removeClass("chevron-top");
+    });
+    
+});
+    </script>
+
+</head>
+
+
+<body>
+    <header>
+<nav role="navigation">
+  <div id="menuToggle">
+   
+    <input type="checkbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      <a href="home.html"><li>Home</li></a>
+      <a href="schedule.html"><li>Schedule</li></a>
+      <a href="offer.html"><li>Offer</li></a>
+      <a href="profile.html"><li>My profile</li></a>
+      <a href="login.html"><li>Log out</li></a>
+    </ul>
+  </div>
+</nav>
+    </header>
+    
+    <main>
+    
+    <h1>Offer</h1>
+    
+    <img src="img/bar_drinks.png" alt="drinks at the bar">
+    
+     <div class="accordions">
+  <div class="accordion-item">
+    <div class="accordion-title" data-tab="item1">
+      <h2>Discounts <i class="fas fa-chevron-down"></i></h2>
+    </div>
+    <div class="accordion-content" id="item1">
+      <div class="headline">
+          <h3>Beer clip-card</h3>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">100kr</div>
+      </div>
+      </div>
+     <hr>
+     
+     
+     <div class="clip_card_beer">
+         <img class="empty" src="img/beer_empty.png" alt="empty beer">
+         <img class="empty" src="img/beer_empty.png" alt="empty beer">
+         <img class="full" src="img/beer_full.png" alt="beer">
+         <img class="full" src="img/beer_full.png" alt="beer">>
+         <img class="full" src="img/beer_full.png" alt="beer">>
+         <img class="full" src="img/beer_full.png" alt="beer">>
+         <img class="full" src="img/beer_full.png" alt="beer">>
+         <img class="full" src="img/beer_full.png" alt="beer">>
+         <img class="full" src="img/beer_full.png" alt="beer">>
+         <img class="full" src="img/beer_full.png" alt="beer">>
+     </div>
+     
+     <div class="clip_count">
+         <p>8</p><p style="color: #E94171;">/</p><p>10 left</p>
+        <button class="use" type="submit">Use</button>
+     </div> 
+     
+     <h3>Other discounts</h3>
+     <hr>
+     <div class="discount">
+         <h4>Only this Saturday 2 May</h4>
+        <h5>Double Gin Hass for 20kr</h5>
+         
+     </div>
+     
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-title" data-tab="item2">
+      <h2>Beer <i class="fas fa-chevron-down"></i></h2>
+    </div>
+    <div class="accordion-content" id="item2">
+      
+      <div class="headline">
+          <p>Tuborg beer ................................</p>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">15kr</div>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="accordion-item">
+    <div class="accordion-title" data-tab="item3">
+      <h2>Drinks <i class="fas fa-chevron-down"></i></h2>
+    </div>
+    <div class="accordion-content" id="item3">
+      
+      <div class="headline">
+          <p>Energizer .....................................</p>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">25kr</div>
+      </div>
+      </div>
+      
+      <div class="headline">
+          <p>Gin Hass ......................................</p>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">25kr</div>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="accordion-item">
+    <div class="accordion-title" data-tab="item4">
+      <h2>Shots <i class="fas fa-chevron-down"></i></h2>
+    </div>
+    <div class="accordion-content" id="item4">
+     
+      <div class="headline">
+          <p>Sambuka shot .............................</p>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">10kr</div>
+      </div>
+      </div>
+      
+      <div class="headline">
+          <p>Watermelon shot .......................</p>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">10kr</div>
+      </div>
+      </div>
+      
+      <div class="headline">
+          <p>Apple shot ...................................</p>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">10kr</div>
+      </div>
+      </div>
+      
+      <div class="headline">
+          <p>10 shots mix ................................</p>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">10kr</div>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="accordion-item">
+    <div class="accordion-title" data-tab="item5">
+      <h2>Wine <i class="fas fa-chevron-down"></i></h2>
+    </div>
+    <div class="accordion-content" id="item5">
+      
+      <div class="headline">
+          <p>White wine (glass) .......................</p>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">10kr</div>
+      </div>
+      </div>
+      
+      <div class="headline">
+          <p>Red wine (glass) ..........................</p>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">10kr</div>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="accordion-item">
+    <div class="accordion-title" data-tab="item6">
+      <h2>Other <i class="fas fa-chevron-down"></i></h2>
+    </div>
+    <div class="accordion-content" id="item6">
+      
+      <div class="headline">
+          <p>Lemon soda ................................</p>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">10kr</div>
+      </div>
+      </div>
+      
+      <div class="headline">
+          <p>Coca-cola .....................................</p>
+        <div class="price_box">
+          <img src="img/circles.png" alt="circle shape"> 
+          <div class="price">10kr</div>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+   
+    </main>
+    
+    </body>
+    
+</html>

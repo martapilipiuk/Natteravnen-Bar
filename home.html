@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css" />
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Natteravnen Bar</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    
+    <script> 
+    $(document).ready(function(){
+    $(".accordion-title").click(function(e){
+        var accordionitem = $(this).attr("data-tab");
+        $("#"+accordionitem).slideToggle().parent().siblings().find(".accordion-content").slideUp();
+
+        $(this).toggleClass("active-title");
+        $("#"+accordionitem).parent().siblings().find(".accordion-title").removeClass("active-title");
+
+        $("i.fa-chevron-down",this).toggleClass("chevron-top");
+        $("#"+accordionitem).parent().siblings().find(".accordion-title i.fa-chevron-down").removeClass("chevron-top");
+    });
+    
+});
+    </script>
+
+</head>
+
+
+<body>
+    <header>
+<nav role="navigation">
+  <div id="menuToggle">
+   
+    <input type="checkbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      <a href="home.html"><li>Home</li></a>
+      <a href="schedule.html"><li>Schedule</li></a>
+      <a href="offer.html"><li>Offer</li></a>
+      <a href="profile.html"><li>My profile</li></a>
+      <a href="login.html"><li>Log out</li></a>
+    </ul>
+  </div>
+</nav>
+    </header>
+    
+    <main>
+    
+    <h1>Welcome to Natteravnen</h1>
+    <div class="DJ">
+        <img src="img/DJ.gif" alt="DJ animation">
+    </div>
+    
+ <div class="accordions">
+  <div class="accordion-item">
+    <div class="accordion-title" data-tab="item1">
+      <h2>News <i class="fas fa-chevron-down"></i></h2>
+    </div>
+    <div class="accordion-content" id="item1">
+      
+      <div class="news1">
+          <h4>OPENING HOURS</h4>
+          <h5>Thursday : 21:00-03:00</h5>
+          <h5>Saturday : 22:00-04:00</h5>
+      </div>
+      
+      <div class="news2">
+          <h6>Attention! Our stripper's performance will be delayed. We are starting at 23:00</h6>
+          <img src="img/strippers.png" alt="strippers">
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-title" data-tab="item2">
+      <h2>Photos <i class="fas fa-chevron-down"></i></h2>
+    </div>
+    <div class="accordion-content" id="item2">
+      
+      <div class="gallery">
+          <a href="img/bar_photo1.png" data-lightbox="mygallery"><img src="img/bar_photo1.png" alt="bar photo"></a>
+          <a href="img/bar_photo2.png" data-lightbox="mygallery"><img src="img/bar_photo2.png" alt="bar photo"></a>
+         <a href="img/bar_photo3.png" data-lightbox="mygallery"><img src="img/bar_photo3.png" alt="bar photo"></a>
+          
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+    
+    </main>
+    </body>
+</html>

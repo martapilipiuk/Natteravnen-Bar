@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/event.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Natteravnen Bar</title>
+    <script>
+        function goBack() {
+            window.history.back()
+}
+        
+        function myFunction() {
+            alert("You've succesfully signed up for this event");
+}
+</script>
+    
+</head>
+<body>
+<header>
+ <nav role="navigation">
+  <div id="menuToggle">
+   
+    <input type="checkbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      <a href="home.html"><li>Home</li></a>
+      <a href="schedule.html"><li>Schedule</li></a>
+      <a href="offer.html"><li>Offer</li></a>
+      <a href="profile.html"><li>My profile</li></a>
+      <a href="login.html"><li>Log out</li></a>
+    </ul>
+  </div>
+</nav>
+  </header>
+   <main>
+   
+   <button class="back" onclick="goBack()">Go Back</button>
+   
+   <h1>Kahoot Night</h1>
+   
+   <img class="kahoot_pic" src="img/k!.png" alt="kahoot">
+   
+   <h2>Thursday, 30 April</h2>
+   
+   <p>Click on the Attend button to let everyone know that you’ll be there</p>
+   
+   <button class="attend_btn" onClick="myFunction()">Attend</button>
+   
+   <div class="spotify">
+       <img class="cloud" src="img/pink_cloud.png" alt="pink shape">
+       <div class="text">
+       <p>Add your favourite songs to the Spotify playlist. Click on the link.</p>
+       </div>
+       <div class="spotify_btn">
+       <a href="https://open.spotify.com/playlist/47FxdC4cHqLVB66JAdikdq?si=dHcm3lDVQNyI8BLB8OjjiA"><img src="img/spotify_btn.png" alt="spotify playlist"></a>
+       </div>
+       
+   </div>
+   
+   <h3>List of friends attending this party</h3>
+     <hr>
+     <div class="profile_images">
+     <img class="profile_pic" src="img/persona1.png" alt="image of participant">
+     <img class="profile_pic" src="img/persona2.png" alt="image of participant">
+     <img class="profile_pic" src="img/persona3.jpg" alt="image of participant">
+     <img class="profile_pic" src="img/persona1.png" alt="image of participant">
+     <img class="profile_pic" src="img/persona2.png" alt="image of participant">
+     <img class="profile_pic" src="img/persona3.jpg" alt="image of participant">
+     <img class="profile_pic" src="img/persona3.jpg" alt="image of participant">
+     </div>
+   
+    </main>
+    </body>
+</html>
