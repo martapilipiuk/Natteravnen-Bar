@@ -1,0 +1,390 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*--- END Of RESET & Start of CSS ---*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #21244B;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #FDFDFE;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #FDFDFE;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  font-weight: 700;
+}
+
+
+#menuToggle input
+{
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  margin-left: 70%;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: flex;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #FDFDFE;
+  border-radius: 3px;
+  z-index: 1;
+  margin-left: 70%;
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #FDFDFE;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+    text-align: center;
+  margin: -100px 0 0 -55px;
+  padding: 180px 50px;;
+    
+  background: linear-gradient(0deg, rgba(33,36,75,1) 0%, rgba(233,65,113,1) 100%);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 20px 0;
+  font-size: 40px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+h1 {
+    font-size: 40px;
+    color: #FDFDFE;
+    text-align: center;
+    margin-top: 20%;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 21px;
+    color: #E94171;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    color: #FDFDFE;
+}
+
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    color: #FDFDFE;
+}
+
+.DJ {
+    width: 70%;
+    margin: auto;
+}
+
+.accordions {
+    width: 90%;
+    margin: 15px auto;
+}
+
+.accordion-item {
+    background-image: linear-gradient(90deg, rgba(28,75,152,1) 0%, rgba(233,65,113,1) 100%);
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+.accordion-item .accordion-title {
+    cursor: pointer;
+    padding: 15px 25px;
+    transition: all 0.4s;
+    border-radius: 25px 25px 0 0;
+    color: #FDFDFE;
+}
+
+.accordion-item .accordion-title.active-title {
+     background-image: linear-gradient(90deg, rgba(28,75,152,1) 0%, rgba(233,65,113,1) 100%);
+    color: #FDFDFE;
+}
+
+.accordion-item .accordion-title h2 {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-item .accordion-title i.fa-chevron-down {
+    transform: rotate(0);
+    transition: 0.4s;
+}
+
+.accordion-item .accordion-title i.fa-chevron-down.chevron-top {
+    transform: rotate(-180deg);
+}
+
+.accordion-item .accordion-content {
+    display: none;
+    line-height: 1.7;
+    padding: 20px;
+    background-color: #21244B;
+    border-radius: 0 0 5px 5px;
+}
+
+.accordion-item .accordion-content.active {
+    display: block;
+}
+
+.accordion-item .accordion-content p {
+    margin: 0;
+}
+
+.news1 {
+    background-color: #1C4B98;
+    border-radius: 20px;
+    padding: 5spx;
+    margin-top: 5px;
+}
+
+.news2 {
+    background-color: #E94171;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 15px;
+    display: flex;
+}
+
+.news2 > img {
+    width: 40%;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.gallery img {
+    width: 90px;
+    margin: 4px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+
+
